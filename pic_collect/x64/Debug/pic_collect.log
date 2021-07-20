@@ -1,0 +1,4 @@
+﻿  pic_collect.cpp
+c:\program files (x86)\intel realsense sdk 2.0\include\librealsense2\h\rs_option.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\visual_studio\pro\pic_collect\pic_collect\pic_collect.cpp(13): warning C4311: “类型强制转换”: 从“Qt::HANDLE”到“int”的指针截断
+  pic_collect.vcxproj -> D:\visual_studio\pro\pic_collect\x64\Debug\pic_collect.exe
