@@ -34,12 +34,8 @@ class Utils
 public:
 	Utils();
 	~Utils();
-	void save_videos(vector<Mat>, vector<int>, int);
+	void save_Realsensevideos(vector<Mat>, vector<int>, int);
 	void init_csv();
 	void add_id();
 	void RemoveAll(QString);
-
-private:
-	rs2::colorizer color_map;
 };
-

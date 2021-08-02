@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'thread_cam.h'
+** Meta object code from reading C++ file 'thread1.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.14.2)
 **
@@ -7,11 +7,11 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../thread_cam.h"
+#include "../../../thread1.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'thread_cam.h' doesn't include <QObject>."
+#error "The header file 'thread1.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.14.2. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -21,27 +21,27 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_thread_cam_t {
+struct qt_meta_stringdata_thread1_t {
     QByteArrayData data[3];
-    char stringdata0[29];
+    char stringdata0[26];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_thread_cam_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_thread1_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_thread_cam_t qt_meta_stringdata_thread_cam = {
+static const qt_meta_stringdata_thread1_t qt_meta_stringdata_thread1 = {
     {
-QT_MOC_LITERAL(0, 0, 10), // "thread_cam"
-QT_MOC_LITERAL(1, 11, 16), // "processed_QImage"
-QT_MOC_LITERAL(2, 28, 0) // ""
+QT_MOC_LITERAL(0, 0, 7), // "thread1"
+QT_MOC_LITERAL(1, 8, 16), // "processed_QImage"
+QT_MOC_LITERAL(2, 25, 0) // ""
 
     },
-    "thread_cam\0processed_QImage\0"
+    "thread1\0processed_QImage\0"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_thread_cam[] = {
+static const uint qt_meta_data_thread1[] = {
 
  // content:
        8,       // revision
@@ -63,10 +63,10 @@ static const uint qt_meta_data_thread_cam[] = {
        0        // eod
 };
 
-void thread_cam::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void thread1::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<thread_cam *>(_o);
+        auto *_t = static_cast<thread1 *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->processed_QImage((*reinterpret_cast< QImage(*)>(_a[1])),(*reinterpret_cast< QImage(*)>(_a[2]))); break;
@@ -75,8 +75,8 @@ void thread_cam::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (thread_cam::*)(QImage , QImage );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&thread_cam::processed_QImage)) {
+            using _t = void (thread1::*)(QImage , QImage );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&thread1::processed_QImage)) {
                 *result = 0;
                 return;
             }
@@ -84,30 +84,30 @@ void thread_cam::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject thread_cam::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject thread1::staticMetaObject = { {
     QMetaObject::SuperData::link<QThread::staticMetaObject>(),
-    qt_meta_stringdata_thread_cam.data,
-    qt_meta_data_thread_cam,
+    qt_meta_stringdata_thread1.data,
+    qt_meta_data_thread1,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *thread_cam::metaObject() const
+const QMetaObject *thread1::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *thread_cam::qt_metacast(const char *_clname)
+void *thread1::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_thread_cam.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_thread1.stringdata0))
         return static_cast<void*>(this);
     return QThread::qt_metacast(_clname);
 }
 
-int thread_cam::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int thread1::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QThread::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -125,7 +125,7 @@ int thread_cam::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void thread_cam::processed_QImage(QImage _t1, QImage _t2)
+void thread1::processed_QImage(QImage _t1, QImage _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

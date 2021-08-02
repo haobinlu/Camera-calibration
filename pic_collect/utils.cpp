@@ -7,7 +7,7 @@ Utils::Utils()
 
 Utils::~Utils()
 {
-	
+
 }
 
 void Utils::RemoveAll(QString folderDir)
@@ -15,8 +15,8 @@ void Utils::RemoveAll(QString folderDir)
 	QDir dir(folderDir);
 	QFileInfoList fileList;
 	QFileInfo curFile;
-	if (!dir.exists()) { 
-		return; 
+	if (!dir.exists()) {
+		return;
 	}//文件不存，则返回false
 	fileList = dir.entryInfoList(QDir::Dirs | QDir::Files
 		| QDir::Readable | QDir::Writable
@@ -63,7 +63,7 @@ void Utils::init_csv() {
 	if (access(information_csv_path.c_str(), 0) == -1) {
 		ofstream file;
 		file.open(information_csv_path, std::ios::out);
-		file << "sample序号"  << ",id" << ",性别"<< "\n";
+		file << "sample序号" << ",id" << ",性别" << "\n";
 		file.close();
 		return;
 	}
@@ -85,7 +85,7 @@ void Utils::init_csv() {
 
 }
 
-void Utils::save_videos(vector<Mat> frame_ls, vector<int> FrameNum_ls, int cam) {
+void Utils::save_Realsensevideos(vector<Mat> frame_ls, vector<int> FrameNum_ls, int cam) {
 
 	QString str = QString("util thread id:%3").arg((int)QThread::currentThreadId());
 	qDebug() << str;

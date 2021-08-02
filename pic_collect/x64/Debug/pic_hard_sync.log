@@ -1,0 +1,8 @@
+﻿  moc pic_hard_sync.h
+  main.cpp
+  pic_hard_sync.cpp
+c:\program files (x86)\intel realsense sdk 2.0\include\librealsense2\h\rs_option.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 main.cpp)
+c:\program files (x86)\intel realsense sdk 2.0\include\librealsense2\h\rs_option.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 (编译源文件 pic_hard_sync.cpp)
+  moc_pic_hard_sync.cpp
+c:\program files (x86)\intel realsense sdk 2.0\include\librealsense2\h\rs_option.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  pic_hard_sync.vcxproj -> D:\visual_studio\pro\pic_hard_sync\pic_hard_sync\x64\Debug\pic_hard_sync.exe
