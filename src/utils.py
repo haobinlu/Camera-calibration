@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 # @Author  : Wanglu
 # @Time    : 2021/06/25 11:33
-
+import datetime
 import os
 import csv
 
-import cv2
+import cv2, time
 import numpy as np
 import pandas as pd
+
 
 
 class Utils():
@@ -52,6 +53,12 @@ class Utils():
             img_path = os.path.join(sample_path, mode + '_%03d.jpg' % (index + 1))
             cv2.imwrite(img_path, img)
 
+    def save_picture(self, camera, img):
+        sample_path = os.path.join(self.conf.root_path, "calibration_pic", camera)
+        if not os.path.exists(sample_path):
+            os.mkdir(sample_path)
+        img_path = os.path.join(sample_path, "{}.jpg".format(datetime.datetime.now().strftime('%m_%d_%H_%M_%S')))
+        cv2.imwrite(img_path, img)
 
     def add_id(self):
         if self.conf.current_NO in self.user_sample_num_ls:

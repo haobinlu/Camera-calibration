@@ -4,11 +4,13 @@
 #include <QDebug>
 #include<librealsense2/rs.hpp>
 #include <vector>
+#include <windows.h>
 #include "opencv2/core/core.hpp"
 #include "opencv2/videoio/videoio.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/imgcodecs/imgcodecs.hpp"
 #include "opencv2/highgui/highgui.hpp"
+#include <sys/timeb.h>
 
 #include "utils.h"
 
@@ -20,7 +22,6 @@ extern int FRAME_WIDTH;
 extern int label_RGB_height; // RGBD相机彩色图像显示位置的高度
 extern int label_RGB_width;
 extern int record_frame;
-extern vector<vector<int>> FrameNum_cam;
 
 class thread_realsense : public QThread
 {
@@ -45,9 +46,12 @@ private:
 
 	vector<Mat> frame_ls;
 	vector<int> FrameNum_ls;
+	vector<double> timestamps;
 
 	Mat color_image_scale;
 	Mat depth_image_scale;
+	Mat depth_image_8U;
+	timeb t;
 
 	int r_t = 0;
 	int cam;

@@ -28,8 +28,8 @@ class RGB_2_Thread(QThread):
 
         self.r_t = 0 #已经注册的次数
 
-        #运行状态[0：无动作, 1：注册]
-        self.recording = False
+        #运行状态[0：无动作, 1：注册, 2:标定]
+        self.recording = 0
         self.compelet = True
         self.ready_time = 0
         self.total_ready_time = win.total_ready_time
@@ -37,15 +37,17 @@ class RGB_2_Thread(QThread):
         self.imgs_buffer = []
 
     def run(self):
+        jj = 0
         while(1):
             ret, color = self.cap.read()
             color = color[self.crop[1]:self.crop[3], self.crop[0]:self.crop[2], :]
             self.signal_changeFrame.emit([color, self.win.ui.label_RGB_2])
 
-            if self.recording:
-                if len(self.imgs_buffer) == 0:
-                    print("{}:{}   RGB2开始第{}次录制".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3], self.win.current_NO, self.r_t))
-
+            if self.recording == 1:
+                # if len(self.imgs_buffer) == 0:
+                # print("{}:{}   RGB2开始第{}次录制".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3], self.win.current_NO, self.r_t))
+                print("tread2:{}:{}".format(jj, datetime.now()))
+                jj += 1
 
                 self.compelet = False
 
@@ -59,7 +61,8 @@ class RGB_2_Thread(QThread):
 
 
                 if len(self.imgs_buffer) == self.sample_frame:
-                    print("{}:{}   RGB2结束第{}次录制".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3], self.win.current_NO, self.r_t))
+                    # print("{}:{}   RGB2结束第{}次录制".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3], self.win.current_NO, self.r_t))
+                    print('tread2:{}'.format(datetime.now()))
                     self.win.utils.save_video(self.r_t + 1, 'RGBD_02', self.imgs_buffer, 'rgb')
                     self.r_t +=1
                     self.ready_time = 0
@@ -67,5 +70,12 @@ class RGB_2_Thread(QThread):
 
                     if self.r_t == self.win.total_recording_time:
                         self.r_t = 0
+
+                        jj = 0
+
                         self.compelet = True
-                        self.recording = False
+                        self.recording = 0
+
+            elif self.recording == 2:
+                self.win.utils.save_picture('RGBD_02', color)
+                self.recording = 0

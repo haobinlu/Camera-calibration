@@ -63,7 +63,7 @@ void Utils::init_csv() {
 	if (access(information_csv_path.c_str(), 0) == -1) {
 		ofstream file;
 		file.open(information_csv_path, std::ios::out);
-		file << "sample序号" << ",id" << ",性别" << "\n";
+		file << "用户ID" << ",手势类型" << ",手势序号" << "\n";
 		file.close();
 		return;
 	}
@@ -74,9 +74,9 @@ void Utils::init_csv() {
 		while (getline(inFile, lineStr)) {
 			stringstream ss(lineStr);  //来自sstream
 			string str;
-			if (lineStr == "sample序号,id,性别") // 第一行不读取
+			if (lineStr == "用户ID,手势类型,手势序号") // 第一行不读取
 				continue;
-			while (getline(ss, str, ',')) {
+			while (getline(ss, str)) {
 				user_sample_num_ls.push_back(str);
 				break;
 			}
@@ -85,44 +85,80 @@ void Utils::init_csv() {
 
 }
 
-void Utils::save_Realsensevideos(vector<Mat> frame_ls, vector<int> FrameNum_ls, int cam) {
+void Utils::save_Realsensevideos(vector<Mat> frame_ls, vector<double> timetamps, vector<int> FrameNum_ls, int cam) {
 
 	QString str = QString("util thread id:%3").arg((int)QThread::currentThreadId());
 	qDebug() << str;
 
 	string root = root_path.toStdString();
-	string cur_NO = current_NO.toStdString();
-	string sample_path = root + "/sample_" + cur_NO + "/";
+	string cur_ID = current_ID.toStdString();
+	string cur_geutureID = current_gestureID.toStdString();
+	string cur_geutureNO = current_gestureNO.toStdString();
+	string sample_path = root + "/sample_" + cur_ID + "/";
 	if (access(sample_path.c_str(), 0) == -1)
 		mkdir(sample_path.c_str());
-	string sample_path_RGBD = sample_path + "RGBD_" + to_string(cam) + "/";
-	if (access(sample_path_RGBD.c_str(), 0) == -1)
-		mkdir(sample_path_RGBD.c_str());
-	string sample_path_rgb = sample_path_RGBD + "rgb/";
+	string sample_path_ID = sample_path + cur_geutureID + "_" + cur_geutureNO + "/";
+	if (access(sample_path_ID.c_str(), 0) == -1)
+		mkdir(sample_path_ID.c_str());
+	string sample_path_rgb = sample_path_ID + "realsense" + to_string(cam) + "_rgb/";
 	if (access(sample_path_rgb.c_str(), 0) == -1)
 		mkdir(sample_path_rgb.c_str());
-	string sample_path_depth = sample_path_RGBD + "depth/";
+	string sample_path_depth = sample_path_ID + "realsense" + to_string(cam) + "_depth/";
 	if (_access(sample_path_depth.c_str(), 0) == -1)
 		mkdir(sample_path_depth.c_str());
 
 	int frame_len = (int)frame_ls.size() / 2;
+	FrameNum_cam[cam] = FrameNum_ls.back();
 	for (int i = 0; i < frame_len; i++) {
 
-		string color_path = sample_path_rgb + to_string(FrameNum_ls[i]) + ".jpg";
-		string depth_path = sample_path_depth + to_string(FrameNum_ls[i]) + ".jpg";
+		//string color_path = sample_path_rgb + to_string(timetamps[i]).substr(0, 13) + ".jpg";
+		//string depth_path = sample_path_depth + to_string(timetamps[i]).substr(0, 13) + ".png";
+
+		
+		string color_path = sample_path_rgb + string(3 - to_string(FrameNum_ls[i]).length(), '0') + to_string(FrameNum_ls[i]) + ".jpg";
+		string depth_path = sample_path_depth + string(3 - to_string(FrameNum_ls[i]).length(), '0') + to_string(FrameNum_ls[i]) + ".png";
 
 		imwrite(color_path, frame_ls[2 * i]);
 		imwrite(depth_path, frame_ls[2 * i + 1]);
 	}
 }
 
+void Utils::save_MdvisionVideos(vector<double> timetamps, vector<Mat> frame_ls, int cam, string mode) {
+
+	QString str = QString("util thread id:%3").arg((int)QThread::currentThreadId());
+	qDebug() << str;
+
+	string root = root_path.toStdString();
+	string cur_ID = current_ID.toStdString();
+	string cur_geutureID = current_gestureID.toStdString();
+	string cur_geutureNO = current_gestureNO.toStdString();
+	string sample_path = root + "/sample_" + cur_ID + "/";
+	if (access(sample_path.c_str(), 0) == -1)
+		mkdir(sample_path.c_str());
+	string sample_path_ID = sample_path + cur_geutureID + "_" + cur_geutureNO + "/";
+	if (access(sample_path_ID.c_str(), 0) == -1)
+		mkdir(sample_path_ID.c_str());
+	string sample_path_mode = sample_path_ID + mode + "_" + to_string(cam) + "/";
+	if (access(sample_path_mode.c_str(), 0) == -1)
+		mkdir(sample_path_mode.c_str());
+
+	int frame_len = (int)frame_ls.size();
+	for (int i = 0; i < frame_len; i++) {
+
+		//string path = sample_path_mode + to_string(timetamps[i]).substr(0, 13) + ".jpg";
+		string path = sample_path_mode + string(3 - to_string(i).length(), '0') + to_string(i) + ".jpg";
+
+		imwrite(path, frame_ls[i]);
+	}
+}
+
 void Utils::add_id() {
-	if (std::find(user_sample_num_ls.begin(), user_sample_num_ls.end(), current_NO.toStdString()) != user_sample_num_ls.end()) {
+	if (std::find(user_sample_num_ls.begin(), user_sample_num_ls.end(), (current_ID.toStdString() + "," + current_gestureID.toStdString() + "," + current_gestureNO.toStdString())) != user_sample_num_ls.end()) {
 		return;
 	}
 	ofstream file;
 	file.open(information_csv_path, std::ios::app);
-	file << current_NO.toLocal8Bit().toStdString() << "," << current_ID.toLocal8Bit().toStdString() << "," << current_sex.toLocal8Bit().toStdString() << "\n";
+	file << current_ID.toLocal8Bit().toStdString() << "," << current_gestureID.toLocal8Bit().toStdString() << "," << current_gestureNO.toLocal8Bit().toStdString() << "\n";
 	file.close();
-	user_sample_num_ls.push_back(current_ID.toStdString());
+	user_sample_num_ls.push_back((current_ID.toStdString() + "," + current_gestureID.toStdString() + "," + current_gestureNO.toStdString()));
 }

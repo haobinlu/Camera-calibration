@@ -73,8 +73,8 @@ class MainWindow(QtWidgets.QMainWindow):
             self.conf.current_ID = self.current_ID
             self.conf.current_sex = self.current_sex
 
-            self.RGB_1_th.recording = True
-            self.RGB_2_th.recording = True
+            self.RGB_1_th.recording = 1
+            self.RGB_2_th.recording = 1
 
     def del_user(self):
         self.current_NO = self.ui.lineEdit_NO.text()
@@ -102,6 +102,24 @@ class MainWindow(QtWidgets.QMainWindow):
                 QMessageBox.warning(self, "Warning", "该用户未注册，请检查信息是否正确")
                 return
 
+    def calibration_camera_1_changed(self):
+        self.calibration_cam_1 = self.ui.comboBox_calibration_camera_1.currentIndex()
+
+    def calibration_camera_2_changed(self):
+        self.calibration_cam_2 = self.ui.comboBox_calibration_camera_2.currentIndex()
+
+    def start_calibration(self):
+        # if self.calibration_cam_1 == self.calibration_cam_2:
+        #     QMessageBox.warning(self, "Warning", "请选择不相同的两个相机进行标定")
+        #     return
+        # else:
+        #     pass
+        self.RGB_1_th.recording = 2
+        self.RGB_2_th.recording = 2
+        while(1):
+            if self.RGB_1_th.recording == 0:
+                QMessageBox.warning(self, "Warning", "完成采集")
+                return
     def sample_frame_changed(self):
         try:
             self.sample_frame = int(self.ui.lineEdit_sample_frame.text())
@@ -176,6 +194,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.current_NO = None   #当前注册用户的sample序列
         self.current_ID = None   #当前注册用户的ID
         self.current_sex = None  #当前注册用户的性别
+        self.calibration_cam_1 = self.ui.comboBox_calibration_camera_1.currentIndex()  #需要标定的相机1
+        self.calibration_cam_2 = self.ui.comboBox_calibration_camera_2.currentIndex()  # 需要标定的相机2
 
         self.conf = Nothing()
         self.conf.root_path = self.root_path
@@ -210,6 +230,14 @@ class MainWindow(QtWidgets.QMainWindow):
         '''
         深度图像显示界面
         '''
+
+        '''
+        相机标定界面
+        '''
+        self.ui.comboBox_calibration_camera_1.currentIndexChanged.connect(self.calibration_camera_1_changed)
+        self.ui.comboBox_calibration_camera_2.currentIndexChanged.connect(self.calibration_camera_2_changed)
+        #开始标定按钮
+        self.ui.pushButton_start_calibration.clicked.connect(self.start_calibration)
 
         '''
         设置界面

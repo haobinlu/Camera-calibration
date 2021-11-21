@@ -28,12 +28,11 @@ class RGB_1_Thread(QThread):
         self.cap_img_width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))  # 采集图片的WIDTH
         tmp = int((self.cap_img_width - self.cap_img_height) / 2)
         self.crop = [tmp, 0, tmp + self.cap_img_height, self.cap_img_height]
-        self.win = win
 
         self.r_t = 0 #已经注册的次数
 
-        #运行状态[0：无动作, 1：注册]
-        self.recording = False
+        #运行状态[0：无动作, 1：注册, 2:标定]
+        self.recording = 0
         self.compelet = True
         self.ready_time = 0
         self.total_ready_time = win.total_ready_time
@@ -41,17 +40,20 @@ class RGB_1_Thread(QThread):
         self.imgs_buffer = []
 
     def run(self):
+        jj = 0
         while(1):
             ret, color = self.cap.read()
             color = color[self.crop[1]:self.crop[3], self.crop[0]:self.crop[2], :]
             self.signal_changeFrame.emit([color, self.win.ui.label_RGB_1])
 
             if self.recording:
-                if len(self.imgs_buffer) == 0:
-                    print("{}:{}   RGB1开始第{}次录制".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3], self.win.current_NO, self.r_t))
+                # if len(self.imgs_buffer) == 0:
+                # print("{}:{}   RGB1开始第{}次录制".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3], self.win.current_NO, self.r_t))
+                print("tread1:{}:{}".format(jj, datetime.now()))
+                jj += 1
 
                 self.compelet = False
-                self.signal_label_statu.emit(['red', None, self.r_t])
+                # self.signal_label_statu.emit(['red', None, self.r_t])
 
                 # # 白跑一次进度条，用户做准备
                 # if self.ready_time < self.total_ready_time:
@@ -63,7 +65,8 @@ class RGB_1_Thread(QThread):
                 # self.signal_recordProgress.emit(int(len(self.imgs_buffer) * 100 / self.sample_frame))  # 更新进度条
 
                 if len(self.imgs_buffer) == self.sample_frame:
-                    print("{}:{}   RGB1结束第{}次录制".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3], self.win.current_NO, self.r_t))
+                    # print("{}:{}   RGB1结束第{}次录制".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3], self.win.current_NO, self.r_t))
+                    print('tread1:{}'.format(datetime.now()))
                     self.win.utils.save_video(self.r_t + 1, 'RGBD_01', self.imgs_buffer, 'rgb')
                     self.r_t +=1
                     self.ready_time = 0
@@ -71,8 +74,15 @@ class RGB_1_Thread(QThread):
 
                     if self.r_t == self.win.total_recording_time:
                         self.r_t = 0
+
+                        jj = 0
+
                         self.win.utils.add_id()
                         self.compelet = True
-                        self.recording = False
+                        self.recording = 0
                         time.sleep(0.1)
                         self.signal_check_compelet.emit(True)
+
+            elif self.recording == 2:
+                self.win.utils.save_picture('RGBD_01', color)
+                self.recording = 0

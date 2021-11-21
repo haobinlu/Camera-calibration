@@ -11,6 +11,8 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/imgcodecs/imgcodecs.hpp"
 #include "opencv2/highgui/highgui.hpp"
+#include<windows.h>
+#include <sys/timeb.h>
 
 #include "utils.h"
 
@@ -22,7 +24,6 @@ extern int FRAME_WIDTH;
 extern int label_RGB_height; // RGBD相机彩色图像显示位置的高度
 extern int label_RGB_width;
 extern int record_frame;
-extern vector<vector<int>> FrameNum_cam;
 
 class mainthread_cam : public QThread
 {
@@ -47,13 +48,16 @@ private:
 
 	vector<Mat> frame_ls;
 	vector<int> FrameNum_ls;
+	vector<double> timestamps;
 
 	Mat color_image_scale;
 	Mat depth_image_scale;
+	Mat depth_image_8U;
 
 	int r_t = 0;
 	int cam;
 	int last_frame_num = -1;
+	timeb t;
 
 signals:
 	void processed_QImage(QImage, QImage);

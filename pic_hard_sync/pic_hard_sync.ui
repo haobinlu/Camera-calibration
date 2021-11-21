@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1442</width>
+    <width>1429</width>
     <height>879</height>
    </rect>
   </property>
@@ -85,15 +85,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>1、深度鱼眼相机_1</string>
+        <string>1、灰度鱼眼相机_1</string>
        </property>
        <widget class="QLabel" name="label_gray_fisheye_1">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>40</y>
+          <y>60</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -116,15 +116,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>2、深度鱼眼相机_2</string>
+        <string>2、灰度鱼眼相机_2</string>
        </property>
        <widget class="QLabel" name="label_gray_fisheye_2">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>40</y>
+          <y>60</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -186,9 +186,9 @@ padding: 0 3px 0 3px;
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>40</y>
+          <y>60</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -217,9 +217,9 @@ padding: 0 3px 0 3px;
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>40</y>
+          <y>60</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -275,15 +275,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>5、RGB相机_1</string>
+        <string>5、RGB_1</string>
        </property>
        <widget class="QLabel" name="label_RGB_1">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -306,15 +306,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>6、RGB相机_2</string>
+        <string>6、RGB_2</string>
        </property>
        <widget class="QLabel" name="label_RGB_2">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -337,15 +337,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>7、RGB相机_3</string>
+        <string>7、RGB_3</string>
        </property>
        <widget class="QLabel" name="label_RGB_3">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -368,15 +368,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>8、RGB相机_4</string>
+        <string>8、RGB_4</string>
        </property>
        <widget class="QLabel" name="label_RGB_4">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -399,15 +399,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>9、RGB相机_5</string>
+        <string>9、RGB_5</string>
        </property>
        <widget class="QLabel" name="label_RGB_5">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -430,15 +430,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>10、RGB相机_6</string>
+        <string>10、RGB_6</string>
        </property>
        <widget class="QLabel" name="label_RGB_6">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -461,15 +461,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>11、RGB相机_7</string>
+        <string>11、深度_1</string>
        </property>
        <widget class="QLabel" name="label_RGB_7">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -492,15 +492,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>12、RGB相机_8</string>
+        <string>12、深度_2</string>
        </property>
        <widget class="QLabel" name="label_RGB_8">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -523,15 +523,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>13、RGB鱼眼相机_9</string>
+        <string>13、深度_3</string>
        </property>
        <widget class="QLabel" name="label_RGB_9">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -554,15 +554,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>14、RGB相机_10</string>
+        <string>14、深度_4</string>
        </property>
        <widget class="QLabel" name="label_RGB_10">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -585,15 +585,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>15、RGB相机_11</string>
+        <string>15、RGB_7</string>
        </property>
        <widget class="QLabel" name="label_RGB_11">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -616,15 +616,15 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="title">
-        <string>16、RGB相机_12</string>
+        <string>16、RGB_8</string>
        </property>
        <widget class="QLabel" name="label_RGB_12">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>50</y>
           <width>160</width>
-          <height>160</height>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -664,7 +664,7 @@ padding: 0 3px 0 3px;
       <property name="title">
        <string>注册信息</string>
       </property>
-      <widget class="QLabel" name="label_NO">
+      <widget class="QLabel" name="label_ID">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -680,10 +680,13 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="text">
-        <string>sample序号：</string>
+        <string>用户ID：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_NO">
+      <widget class="QLineEdit" name="lineEdit_ID">
        <property name="geometry">
         <rect>
          <x>220</x>
@@ -699,7 +702,7 @@ padding: 0 3px 0 3px;
         </font>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_ID">
+      <widget class="QLineEdit" name="lineEdit_gestureID">
        <property name="geometry">
         <rect>
          <x>220</x>
@@ -718,7 +721,7 @@ padding: 0 3px 0 3px;
         <string/>
        </property>
       </widget>
-      <widget class="QLabel" name="label_ID">
+      <widget class="QLabel" name="label_gestureID">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -734,13 +737,13 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="text">
-        <string>ID:</string>
+        <string>手势类别：</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="label_sex">
+      <widget class="QLabel" name="label_gestureNO">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -756,37 +759,11 @@ padding: 0 3px 0 3px;
         </font>
        </property>
        <property name="text">
-        <string>性别：</string>
+        <string>手势序号：</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
-      </widget>
-      <widget class="QComboBox" name="comboBox_sex">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>140</y>
-         <width>111</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Arial</family>
-         <pointsize>13</pointsize>
-        </font>
-       </property>
-       <item>
-        <property name="text">
-         <string>男</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>女</string>
-        </property>
-       </item>
       </widget>
       <widget class="QPushButton" name="pushButton_regist">
        <property name="geometry">
@@ -864,391 +841,25 @@ padding: 0 3px 0 3px;
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_camera">
-     <attribute name="title">
-      <string>  深  度  图  像  显  示  </string>
-     </attribute>
-     <widget class="QLabel" name="label_RGBD_5">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_10">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_12">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_2">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_8">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_3">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_1">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>640</width>
-        <height>480</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_6">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_11">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_7">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_4">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>120</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_RGBD_9">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>130</y>
-        <width>111</width>
-        <height>111</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>  相  机  标  定</string>
-     </attribute>
-     <widget class="QComboBox" name="comboBox_calibration_camera_1">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>80</y>
-        <width>261</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>1、深度鱼眼相机_1</string>
+      <widget class="QLineEdit" name="lineEdit_gestureNO">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>140</y>
+         <width>113</width>
+         <height>31</height>
+        </rect>
        </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>2、深度鱼眼相机_2</string>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>13</pointsize>
+        </font>
        </property>
-      </item>
-      <item>
        <property name="text">
-        <string>3、RGB相机_1</string>
+        <string/>
        </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>4、RGB鱼眼相机_2</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>5、RGBD相机_1</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>6、RGBD相机_2</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>7、RGBD相机_3</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>8、RGBD相机_4</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>9、RGBD相机_5</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>10、RGBD相机_6</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>11、RGBD相机_7</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>12、RGBD相机_8</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>13、RGBD相机_9</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>14、RGBD相机_10</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>15、RGBD相机_11</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>12、RGBD相机_12</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_calibration_camera_1">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>80</y>
-        <width>211</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>需要标定的相机1：</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_calibration_camera_2">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>180</y>
-        <width>211</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>需要标定的相机2：</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox_calibration_camera_2">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>180</y>
-        <width>261</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>1、深度鱼眼相机_1</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>2、深度鱼眼相机_2</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>3、RGB相机_1</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>4、RGB鱼眼相机_2</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>5、RGBD相机_1</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>6、RGBD相机_2</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>7、RGBD相机_3</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>8、RGBD相机_4</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>9、RGBD相机_5</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>10、RGBD相机_6</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>11、RGBD相机_7</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>12、RGBD相机_8</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>13、RGBD相机_9</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>14、RGBD相机_10</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>15、RGBD相机_11</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>12、RGBD相机_12</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QPushButton" name="pushButton_start_calibration">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>270</y>
-        <width>161</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>开始标定</string>
-      </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab">
@@ -1298,54 +909,11 @@ padding: 0 3px 0 3px;
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_FPS">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>210</y>
-        <width>91</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>10</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_FPS">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>210</y>
-        <width>171</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>20</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>FPS：</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_save_path">
       <property name="geometry">
        <rect>
         <x>390</x>
-        <y>370</y>
+        <y>190</y>
         <width>171</width>
         <height>41</height>
        </rect>
@@ -1369,7 +937,7 @@ padding: 0 3px 0 3px;
       <property name="geometry">
        <rect>
         <x>590</x>
-        <y>430</y>
+        <y>250</y>
         <width>91</width>
         <height>41</height>
        </rect>
@@ -1382,7 +950,7 @@ padding: 0 3px 0 3px;
       <property name="geometry">
        <rect>
         <x>590</x>
-        <y>380</y>
+        <y>200</y>
         <width>811</width>
         <height>31</height>
        </rect>
@@ -1391,31 +959,28 @@ padding: 0 3px 0 3px;
        <string>../data</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_total_recording_time">
+     <widget class="QSpinBox" name="spinBox">
       <property name="geometry">
        <rect>
         <x>590</x>
-        <y>300</y>
+        <y>320</y>
         <width>91</width>
         <height>41</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>20</pointsize>
-       </font>
+      <property name="minimum">
+       <number>40</number>
       </property>
-      <property name="text">
-       <string>3</string>
+      <property name="maximum">
+       <number>160</number>
       </property>
      </widget>
-     <widget class="QLabel" name="label_total_recording_time">
+     <widget class="QLabel" name="label_iAeTarget">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>300</y>
-        <width>231</width>
+        <x>300</x>
+        <y>320</y>
+        <width>261</width>
         <height>41</height>
        </rect>
       </property>
@@ -1428,7 +993,7 @@ padding: 0 3px 0 3px;
        </font>
       </property>
       <property name="text">
-       <string>单个用户注册次数</string>
+       <string>工业相机曝光亮度：</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1442,7 +1007,7 @@ padding: 0 3px 0 3px;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1442</width>
+     <width>1429</width>
      <height>23</height>
     </rect>
    </property>
